@@ -13,7 +13,13 @@ abstract class Funcionario {
     protected String CPF;
     public Double SalarioBase;
 
-    abstract void CalcularPagamento();
+    public Funcionario(String nome, String CPF, Double SalarioBase) {
+        this.nome = nome;
+        this.CPF = CPF;
+        this.SalarioBase = SalarioBase;
+    }
+
+    abstract double CalcularPagamento(double bonus);
     
     
     
