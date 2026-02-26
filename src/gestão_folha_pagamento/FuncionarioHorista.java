@@ -13,9 +13,9 @@ public class FuncionarioHorista extends Funcionario{
     
 
     @Override
-    double CalcularPagamento(double bonus) {
+   public double CalcularPagamento(double bonus) {
     
-        return valorHora * NumeroHoras;
+        return valorHora * NumeroHoras + bonus;
         
     }
 

@@ -20,12 +20,16 @@ public class GerenciadorRH {
          FuncionariosLegais.remove(FuncionarioLegal);
      }
      public void listar(){
+         Double totalfolhapgto = 0.0;
         for(int i = 0; i < FuncionariosLegais.size(); i++){
+            
             System.out.println("\n ==== FUNCIONARIO " + (i + 1) + " ====");
             System.out.println("Funcionario " + FuncionariosLegais.get(i).nome);
-            System.out.println("Salario: " + FuncionariosLegais.get(i).SalarioBase);
-            
+            System.out.println("Salario: " + FuncionariosLegais.get(i).CalcularPagamento(0));
+            totalfolhapgto += FuncionariosLegais.get(i).CalcularPagamento(0);
         }
+         System.out.println("\n ==== TOTAL FOLHA PAGAMENTO ====");
+         System.out.println("R$" + totalfolhapgto);
         
      }
      public void cadastrarHorista(String NomeCadastro, String CPF, double ValorHora, int horastrabalhadas, double SalarioBase){
